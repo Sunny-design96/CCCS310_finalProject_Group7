@@ -1,0 +1,93 @@
+@import "variables";
+
+.navbar {
+  background-color: $background-color; /* Light background color */
+  padding: 0.5rem 1rem; /* Slender padding */
+  display: flex; /* This ensures the children align horizontally by default */
+  align-items: center; /* Vertically align all items */
+  justify-content: space-between; /* Spread items horizontally */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* 80% of the available width */
+  margin: 0 auto; /* Center the navbar horizontally */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adjust spacing between icons and text */
+}
+
+h1 {
+  font-size: 1.5rem; /* Adjust the font size of the title */
+  margin: 0; /* Remove default margin from h1 */
+}
+
+.navbar-links {
+  display: flex; /* Align links horizontally */
+  gap: 1rem; /* Space between links */
+  justify-content: center;
+  flex-grow: 1;
+
+  a {
+    text-decoration: none;
+    color: black; /* Default color for links */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    font-weight: 400; /* Normal weight */
+
+    &:hover {
+      color: $primary-color; /* Change hover color */
+    }
+  }
+}
+
+.navbar-search {
+  margin-left: auto; /* Push the search bar to the far right */
+  display: flex;
+  align-items: center; /* Vertically align input and button */
+  gap: 0.5rem; /* Space between input and button */
+
+  form {
+    display: flex; /* Use flexbox for form elements */
+    align-items: center; /* Ensure input and button are vertically centered */
+    gap: 0.5rem; /* Optional: space between input and button */
+  }
+
+  input {
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid $background-color;
+    width: 200px; /* Adjust this width to suit your design */
+  }
+
+  button {
+    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+/* .navbar-item class (styling for links) */
+.navbar-item {
+  text-decoration: none;
+  color: black; /* Default color for links */
+  font-size: 1rem; /* Adjust font size */
+  font-weight: 400; /* Normal weight for links */
+
+  &:hover {
+    color: $primary-color; /* Change color on hover */
+  }
+}
+
+.navbar .icon i {
+  font-size: 1.5em; /* Makes the icon 30% bigger */
+  color: #632d23; /* Dark blue color */
+}
