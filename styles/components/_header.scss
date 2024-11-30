@@ -1,0 +1,42 @@
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .navbar-brand {
+        .navbar-item {
+            .icon-text {
+                .icon {
+                    color: $primary-color;
+                }
+                .has-text-weight-bold {
+                    font-size: 37px;
+                    color: $primary-color;
+                    font-family: $font-family;
+                }
+            }
+        }
+    }
+
+    .navbar-menu {
+        .navbar-end {
+            .buttons {
+                .button {
+                    @extend .button;
+                    background-color: $primary-color;
+                    color: $button-color;
+
+                    &.is-light {
+                        @extend .is-light;
+                        background-color: transparent;
+                        color: $primary-color;
+
+                        &:hover {
+                            background-color: $primary-color;
+                            color: $button-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

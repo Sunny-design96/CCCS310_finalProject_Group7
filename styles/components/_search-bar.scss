@@ -1,0 +1,20 @@
+.search-bar {
+    .field.has-addons {
+        max-width: 600px;
+        margin: 2rem auto;
+        
+        .control {
+            &.is-expanded {
+                .input {
+                    border-radius: 30px 0 0 30px;
+                    border-color: $primary-color;
+                }
+            }
+        
+            .button {
+                @include button-style($primary-color);
+                border-radius: 0 30px 30px 0;
+            }
+        }
+    }
+}

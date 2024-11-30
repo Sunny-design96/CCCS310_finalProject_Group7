@@ -1,0 +1,40 @@
+.main-footer {
+    background-color: $primary-color;
+    color: white;
+    padding: 3rem 1.5rem;
+
+    .columns {
+        .column.footer-column {
+            h3 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin-bottom: 0.5rem;
+
+                    a {
+                        color: white;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    background-color: darken($primary-color, 5%);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+}

@@ -307,15 +307,11 @@
           <!-- Pagination -->
           <nav class="pagination is-centered" role="navigation" aria-label="pagination">
             <ul class="pagination-list">
-              <li>
-                <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
-              </li>
-              <li>
-                <a class="pagination-link" aria-label="Goto page 2">2</a>
-              </li>
-              <li>
-                <a class="pagination-link" aria-label="Goto page 3">3</a>
-              </li>
+              <li><a class="pagination-previous">&#8249;</a><li>
+              <li><a class="pagination-link" aria-label="Page 1">1</a></li>
+              <li><a class="pagination-link" aria-label="Page 2">2</a></li>
+              <li><a class="pagination-link" aria-label="Page 3">3</a></li>
+              <li><a class="pagination-next">&#8250;</a></li>
             </ul>
           </nav>
         </div>
@@ -343,28 +339,30 @@
 
   <!-- Footer -->
   <footer class="main-footer">
-    <div class="footer-column">
-      <h3>Contact Us</h3>
-      <ul>
-        <li>Email: info@example.com</li>
-        <li>Phone: +123456789</li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h3>Archives</h3>
-      <ul>
-        <li>January 2023</li>
-        <li>December 2022</li>
-        <li>November 2022</li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h3>Recipes</h3>
-      <ul>
-        <li><a href="dinner.html">Dinner</a></li>
-        <li><a href="breakfast.html">Breakfast</a></li>
-        <li><a href="desserts.html">Desserts</a></li>
-      </ul>
+    <div class="columns">
+      <div class="column footer-column">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: info@example.com</li>
+          <li>Phone: +123456789</li>
+        </ul>
+      </div>
+      <div class="column footer-column">
+        <h3>Archives</h3>
+        <ul>
+          <li>January 2023</li>
+          <li>December 2022</li>
+          <li>November 2022</li>
+        </ul>
+      </div>
+      <div class="column footer-column">
+        <h3>Recipes</h3>
+        <ul>
+          <li><a href="dinner.html">Dinner</a></li>
+          <li><a href="breakfast.html">Breakfast</a></li>
+          <li><a href="desserts.html">Desserts</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
   <div class="copyright">

@@ -1,0 +1,11 @@
+@mixin button-style($bg-color) {
+    background-color: $bg-color;
+    border-color: $bg-color;
+    color: $button-color;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}

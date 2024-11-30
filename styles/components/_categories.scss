@@ -1,0 +1,74 @@
+// _categories.scss
+
+.section {
+    padding: 3rem 1.5rem;
+  
+    .title.has-text-centered {
+      @extend .has-text-weight-bold !optional;
+      color: $primary-color;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      font-family: $font-family;
+    }
+  
+    .card {
+      @extend .has-shadow !optional;
+      @extend .is-clickable !optional;
+      
+      height: 100%;
+      border-radius: $border-radius;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+      
+      &:hover {
+        transform: translateY(-5px);
+        @extend .has-shadow-medium !optional;
+      }
+  
+      .card-image {
+        padding: 1rem;
+        
+        .image.is-4by3 {
+          width: 159px;
+          height: 159px;
+          margin: 0 auto;
+          
+          img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+  
+      .card-content {
+        padding: 1rem;
+        text-align: left;
+  
+        .title.is-5 {
+          @extend .has-text-left !optional;
+          color: $text-color;
+          font-family: $font-family;
+          font-size: 1rem;
+          margin-bottom: 0;
+          font-weight: 500;
+        }
+      }
+    }
+  
+    .columns {
+      @extend .is-multiline !optional;
+      margin: -0.75rem;
+      
+      .column {
+        padding: 0.75rem;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .column.is-one-quarter {
+        width: 50%;
+      }
+    }
+  }

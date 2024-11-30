@@ -1,0 +1,13 @@
+// Define color variables
+$primary-color: #A7727D;
+$secondary-color: #bae978;
+$background-color: #FAF9F6;
+$text-color: #333;
+$font-family: 'Lato', sans-serif;
+$button-color: white;
+$border-radius: 5px;
+
+// Override Bulma variables
+$primary: $primary-color;
+$family-primary: $font-family;
+$body-background-color: $background-color;
