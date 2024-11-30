@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A blog featuring delicious recipes" />
+  <meta name="keywords" content="spoon and fork, recipe blog, cooking, breakfast, lunch, dinner, desserts, healthy recipes" />
+  <meta name="author" content="Olivia" />
+  <title>Spoon & Fork</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/dist/css/main.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <span class="icon-text">
+          <span class="icon has-text-primary">
+            <i class="fas fa-utensil-spoon"></i>
+          </span>
+          <span class="icon has-text-primary">
+            <i class="fa-brands fa-d-and-d"></i>
+          </span>
+          <span class="icon has-text-primary">
+            <i class="fa-solid fa-utensils"></i>
+          </span>
+          <span class="has-text-weight-bold">Spoon&Fork</span>
+        </span>
+      </a>
+      <button class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu" onKeyDown="toggleMenu(event)">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="Spoon&Fork.html">Home</a>
+        <a class="navbar-item" href="#">Recipes</a>
+        <a class="navbar-item" href="about.html">About</a>
+        <a class="navbar-item" href="#">Blog</a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-light">Sign in</a>
+            <a class="button is-primary">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- Hero Section -->
+<section class="hero is-medium is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <!-- Text Column -->
+        <div class="column is-6">
+          <h1 class="title is-1">
+            Delicious <span class="has-text-primary">Dishes</span> for Food Lovers
+          </h1>
+          <p class="subtitle is-4">
+            A food blog with hundreds of quick and easy dinner recipes. Classics done right, incredible one-pot recipes, Asian takeout at home, and holiday feasting!
+          </p>
+          <a href="#recipes" class="button is-primary is-medium">Explore recipes</a>
+        </div>
+        
+        <!-- Images Column -->
+        <div class="column is-6">
+          <div class="hero-images">
+            <figure class="image">
+              <img src="images/garlic-bread.jpg" alt="Garlic Bread">
+            </figure>
+            <figure class="image">
+              <img src="images/spaghetti.jpg" alt="Spaghetti Bolognese">
+            </figure>
+            <figure class="image">
+              <img src="images/salmon.jpg" alt="Grilled Salmon">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Search Bar -->
+<section class="section">
+  <div class="container">
+    <div class="field has-addons has-addons-centered">
+      <div class="control is-expanded">
+        <input class="input" type="text" placeholder="Search for a recipe">
+      </div>
+      <div class="control">
+        <a class="button is-primary">
+          <span class="icon">
+            <i class="fas fa-search"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Categories Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title has-text-centered">Categories</h2>
+      <div class="columns is-multiline">
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/placehold.jpg" alt="Breakfast">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5 has-text-centered">Breakfast</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/placehold.jpg" alt="Lunch">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5 has-text-centered">Lunch</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/placehold.jpg" alt="Dinner">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5 has-text-centered">Dinner</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/placehold.jpg" alt="Desserts">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5 has-text-centered">Desserts</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/placehold.jpg" alt="Vegan">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5 has-text-centered">Vegan</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/placehold.jpg" alt="Snacks">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5 has-text-centered">Snacks</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/placehold.jpg" alt="Smoothies">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5 has-text-centered">Smoothies</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/placehold.jpg" alt="Holiday">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5 has-text-centered">Holiday</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Recipes & Advertisement Section -->
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <!-- Latest Recipes Column -->
+        <div class="column is-8 latest-recipes">
+          <h2 class="title section-title">Latest Recipes</h2>
+          <div class="recipe-cards">
+            <!-- First Row -->
+            <div class="columns is-multiline">
+              <!-- Recipe Card 1 -->
+              <div class="column is-4">
+                <div class="card recipe-card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="images/garlic-bread.jpg" alt="Garlic Bread">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="title is-5">Garlic Bread</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Recipe Card 2 -->
+              <div class="column is-4">
+                <div class="card recipe-card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="images/spaghetti.jpg" alt="Spaghetti Bolognese">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="title is-5">Spaghetti Bolognese</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Recipe Card 3 -->
+              <div class="column is-4">
+                <div class="card recipe-card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="images/salmon.jpg" alt="Grilled Salmon">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="title is-5">Grilled Salmon</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Recipe Card 4 -->
+              <div class="column is-4">
+                <div class="card recipe-card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="images/chocolate-cake.jpg" alt="Chocolate Cake">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="title is-5">Chocolate Cake</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Recipe Card 5 -->
+              <div class="column is-4">
+                <div class="card recipe-card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="images/pancakes.jpg" alt="Pancakes">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="title is-5">Pancakes</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Recipe Card 6 -->
+              <div class="column is-4">
+                <div class="card recipe-card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="images/salad.jpg" alt="Salad">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="title is-5">Salad</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+            <ul class="pagination-list">
+              <li>
+                <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+              </li>
+              <li>
+                <a class="pagination-link" aria-label="Goto page 2">2</a>
+              </li>
+              <li>
+                <a class="pagination-link" aria-label="Goto page 3">3</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Advertisement Column -->
+        <div class="column is-4 advertisement-section">
+          <h2 class="title is-4">Featured Ads</h2>
+          <div class="advertisement-card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/placehold.jpg" alt="Advertisement">
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-5">Special Offer!</p>
+              <p>Get 20% off on kitchen essentials</p>
+              <a href="#" class="button is-primary is-outlined mt-4">Learn More</a>
+            </div>
+          </div>
+          <!-- Add more ad cards below -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <ul>
+        <li>Email: info@example.com</li>
+        <li>Phone: +123456789</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Archives</h3>
+      <ul>
+        <li>January 2023</li>
+        <li>December 2022</li>
+        <li>November 2022</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Recipes</h3>
+      <ul>
+        <li><a href="dinner.html">Dinner</a></li>
+        <li><a href="breakfast.html">Breakfast</a></li>
+        <li><a href="desserts.html">Desserts</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="copyright">
+    &copy; 2024 by <strong>Olivia</strong>. All Rights Reserved.
+  </div>
+</body>
+</html>
