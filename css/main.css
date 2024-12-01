@@ -827,4 +827,12 @@ ul li {
   list-style: none;
   text-align: left;
   margin-left: -30px;
+}
+
+.english {
+  display: inline;
+}
+
+.french {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

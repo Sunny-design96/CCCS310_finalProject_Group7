@@ -13,7 +13,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Lavanna Laass" />
-    
+
     <!-- Link to favicon icon -->
     <link
       rel="icon"
@@ -22,87 +22,163 @@
       sizes="196x196"
     />
 
-     <!-- Font Awesome Icons -->
-     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-   />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-      <!-- Link to stylesheet -->
+    <!-- Link to stylesheet -->
     <link rel="stylesheet" href="css/main.css" />
-    
   </head>
   <body onload="selectBox()">
     <header>
-     <!-- Navbar -->
-     <div id="top"></div>
-     <nav class="navbar">
-         <div class="navbar-brand">
-             <span class="icon-text">
-                 <span class="icon has-text-primary">
-                     <i class="fas fa-utensil-spoon"></i>
-                 </span>
-                 <span class="icon has-text-primary">
-                     <i class="fa-solid fa-utensils"></i>
-                 </span>
-             </span>
-             <h1>Spoon & Fork</h1>
-         </div>
+      <!-- Navbar -->
+      <div id="top"></div>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <span class="icon-text">
+            <span class="icon has-text-primary">
+              <i class="fas fa-utensil-spoon"></i>
+            </span>
+            <span class="icon has-text-primary">
+              <i class="fa-solid fa-utensils"></i>
+            </span>
+          </span>
+          <h1>Spoon & Fork</h1>
+        </div>
 
-         <div class="navbar-links" >
-             <a class="navbar-item" href="Home.html">Home</a>
-             <a class="navbar-item" href="About.html">About</a>
-             <a class="navbar-item" href="Recipes.html">Recipes</a>
-             <a class="navbar-item" href="RecipeBlog.html">Blog</a>
-         </div>
+        <div class="navbar-links">
+          <a class="navbar-item, language" href="Home.html">
+            <span class="english">Home</span>
+            <span class="french">Home</span>
+          </a>
 
-         <div class="navbar-search">
-             <form action="#" method="GET">
-                 <input type="text" placeholder="Search recipes...">
-                 <button type="submit">Go</button>
-             </form>
-         </div>
-     </nav>
+          <a class="navbar-item, language" href="About.html">
+            <span class="english">About</span>
+            <span class="french">À propos</span>
+          </a>
+
+          <a class="navbar-item, language" href="Recipes.html">
+            <span class="english">Recipes</span>
+            <span class="french">Recettes</span>
+          </a>
+
+          <a class="navbar-item. language" href="RecipeBlog.html">
+            <span class="english">Blog</span>
+            <span class="french">Blog</span>
+          </a>
+        </div>
+
+        <div class="navbar-search">
+          <form action="#" method="GET" class="language">
+            <input
+              type="text"
+              placeholder="Search recipes..."
+              class="english"
+            />
+            <input
+              type="text"
+              placeholder="Rechercher des recettes..."
+              class="french"
+            />
+            <button type="submit" class="language">
+              <span class="english">Go</span>
+              <span class="french">Aller</span>
+            </button>
+          </form>
+        </div>
+        <div>
+          <button type="submit" id="language" class="primary, language">
+            <span class="english">FR</span>
+            <span class="french">EN</span>
+          </button>
+        </div>
+      </nav>
     </header>
 
-     <!-- Main content -->
+    <!-- Main content -->
     <main class="grid">
       <section class="gridItem1">
-        <h2>We want to hear from <em>you!</em></h2>
-        <p>
-          If you have travelled to any of the destinations shared on the blog,
-          or if you have tried any of our recipes, we would love to hear your
-          experiences. If you have ideas for what recipes we should try next,
-          please send them to us!
+        <h2 class="language">
+          <span class="english"> We want to hear from <em>you!</em> </span>
+          <span class="french">
+            Nous voulons avoir de vos <em>nouvelles !</em>
+          </span>
+        </h2>
+        <p class="language">
+          <span class="english">
+            If you have travelled to any of the destinations shared on the blog,
+            or if you have tried any of our recipes, we would love to hear your
+            experiences. If you have ideas for what recipes we should try next,
+            please send them to us!</span
+          >
+          <span class="french"
+            >Si vous avez voyagé vers l'une des destinations partagées sur le
+            blog, ou si vous avez essayé l'une de nos recettes, nous aimerions
+            connaître votre expérience. Si vous avez des idées de recettes que
+            nous devrions essayer ensuite, n'hésitez pas à nous les
+            envoyer !</span
+          >
         </p>
       </section>
       <section class="gridItem2">
-        <h3>About Us</h3>
-        <p>
-          Hi there! We are Fork&Spoon, a bunch of self-proclaimed food
-          enthusiasts and travel addicts. <br />
-          <br />
-          Welcome to our little corner of the internet where we share our
-          favorite recipes, travel stories, and culinary adventures from around
-          the world.
-          <br />
-          <br />
-          Each destination brings a new discovery, and nothing excites us more
-          than bringing those discoveries back to our own kitchens to share with
-          you. This blog was born out of my desire to celebrate food as a
-          universal language. Here, you’ll find a mix of cherished family
-          recipes, dishes inspired by our travels, and creative twists on
-          classics. Our goal is to make cooking approachable and fun, whether
-          you’re an experienced chef or just starting out.
-          <br />
-          <br />
-          We hope our stories and recipes inspire you to cook something new,
-          explore a different cuisine, or even book that trip you’ve been
-          dreaming of. Life is an adventure, and the best way to experience it
-          is one bite at a time!
+        <h3 class="language">
+          <span class="english">About Us</span>
+          <span class="french">À propos de nous</span>
+        </h3>
+        <p class="language">
+          <span class="english">
+            Hi there! We are Fork&Spoon, a bunch of self-proclaimed food
+            enthusiasts and travel addicts. <br />
+            <br />
+            Welcome to our little corner of the internet where we share our
+            favorite recipes, travel stories, and culinary adventures from
+            around the world.
+            <br />
+            <br />
+            Each destination brings a new discovery, and nothing excites us more
+            than bringing those discoveries back to our own kitchens to share
+            with you. This blog was born out of my desire to celebrate food as a
+            universal language. Here, you’ll find a mix of cherished family
+            recipes, dishes inspired by our travels, and creative twists on
+            classics. Our goal is to make cooking approachable and fun, whether
+            you’re an experienced chef or just starting out.
+            <br />
+            <br />
+            We hope our stories and recipes inspire you to cook something new,
+            explore a different cuisine, or even book that trip you’ve been
+            dreaming of. Life is an adventure, and the best way to experience it
+            is one bite at a time!
+          </span>
+          <span class="french">
+            Bonjour ! Nous sommes Fork&Spoon, une bande de passionnés de cuisine
+            et de voyages autoproclamés. <br />
+            <br />
+            Bienvenue dans notre petit coin d’Internet où nous partageons nos
+            recettes préférées, nos récits de voyage et nos aventures culinaires
+            du monde entier.
+            <br />
+            <br />
+            Chaque destination apporte une nouvelle découverte, et rien ne nous
+            excite plus que de ramener ces découvertes dans nos propres cuisines
+            pour les partager avec vous. Ce blog est né de mon désir de célébrer
+            la nourriture comme un langage universel. Vous y trouverez un
+            mélange de recettes familiales appréciées, de plats inspirés de nos
+            voyages et de versions créatives de classiques. Notre objectif est
+            de rendre la cuisine accessible et amusante, que vous soyez un chef
+            expérimenté ou que vous débutiez.
+            <br />
+            <br />
+            Nous espérons que nos histoires et nos recettes vous inspireront à
+            cuisiner quelque chose de nouveau, à explorer une cuisine différente
+            ou même à réserver le voyage dont vous rêvez. La vie est une
+            aventure, et la meilleure façon de la vivre est une bouchée à la
+            fois !
+          </span>
         </p>
       </section>
-       <!-- Advertisement -->
+      <!-- Advertisement -->
       <section class="gridItem3">
         <div class="div">
           <img
@@ -113,9 +189,17 @@
           />
         </div>
       </section>
-       <!-- Form -->
+      <!-- Form -->
       <section class="gridItem4">
-        <h3>Please complete the below <em>form</em> to contact us.</h3>
+        <h3 class="language">
+          <span class="english">
+            Please complete the below <em>form</em> to contact us.</span
+          >
+          <span class="french"
+            >Veuillez remplir <em>le formulaire </em>ci-dessous pour nous
+            contacter.</span
+          >
+        </h3>
         <div>
           <div>
             <form
@@ -124,59 +208,108 @@
               enctype="text/plain"
             >
               <p>
-                <label for="name">Name:</label>
+                <label for="name" class="language">
+                  <span class="english">Name:</span>
+                  <span class="french">Nom:</span>
+                </label>
                 <input
                   type="text"
                   id="name"
                   name="user_name"
                   maxlength="40"
-                  placeholder="Name"
+                  placeholder="Name/Nom"
                 />
               </p>
               <p>
-                <label for="mail">Email:</label>
+                <label for="mail" class="language">
+                  <span class="english"> Email:</span>
+                  <span class="french"> Courriel:</span>
+                </label>
                 <input
                   type="email"
                   id="mail"
                   name="user_email"
                   maxlength="30"
-                  placeholder="Email"
+                  placeholder="Email/ Courriel"
                   required="required"
+                  oninvalid="this.setCustomValidity('required/requis')"
+                  oninput="this.setCustomValidity()"
                 />
               </p>
               <p>
-                <label for="options">How did you hear about us?</label>
+                <label for="options" class="language">
+                  <span class="english">How did you hear about us?</span>
+                  <span class="french"
+                    >Comment avez-vous entendu parler de nous?</span
+                  >
+                </label>
+
                 <select id="options" name="options">
-                  <option value="" disabled selected>Choose an option</option>
-                  <option value="option1">Advertisement</option>
-                  <option value="option2">Friend</option>
-                  <option value="option3">Blog</option>
-                  <option value="option4">Youtube</option>
-                  <option value="option5">X</option>
-                  <option value="option6">Facebook</option>
+                  <option value="" disabled selected class="langage">
+                    <span class="english">Choose an option</span>
+                    <span class="french">Choisissez une option</span>
+                  </option>
+
+                  <option value="option1" class="language">
+                    <span class="english">Advertisement</span>
+                    <span class="french">Publicité</span>
+                  </option>
+
+                  <option value="option2" class="language">
+                    <span class="english">Friend</span>
+                    <span class="french">Ami</span>
+                  </option>
+
+                  <option value="option3" class="language">
+                    <span class="english">Blog</span>
+                    <span class="french">Blog</span>
+                  </option>
+                  <option value="option4" class="language">
+                    <span class="english">Youtube</span>
+                    <span class="french">Youtube</span>
+                  </option>
+
+                  <option value="option5" class="langage">
+                    <span class="english">X</span>
+                    <span class="french">X</span>
+                  </option>
+
+                  <option value="option6" class="language">
+                    <span class="english">Facebook</span>
+                    <span class="french">Facebook</span>
+                  </option>
                 </select>
               </p>
-              <p>
-                <label>How did you find our website?</label>
-                <div class="star-rating">
+
+              <!-- need to debug language will not change           <p>
+                <label for="ratings" class="language">
+                  <span class="english">How did you find our website?</span>
+                  <span class="french">Comment avez-vous trouvé notre site Web?</span>
+                </label>
+
+                <div id=ratings class="star-rating">
                   <input type="radio" id="star5" name="rating" value="5">
-                  <label for="star5" title="5 stars">&#9733 &#9733 &#9733 &#9733 &#9733;</label>
+                  <label for="star5" title="5">&#9733 &#9733 &#9733 &#9733 &#9733;</label>
                   <br> 
                   <input type="radio" id="star4" name="rating" value="4">
-                  <label for="star4" title="4 stars">&#9733 &#9733 &#9733 &#9733;</label>
+                  <label for="star4" title="4">&#9733 &#9733 &#9733 &#9733;</label>
                   <br> 
                   <input type="radio" id="star3" name="rating" value="3">
-                  <label for="star3" title="3 stars">&#9733 &#9733 &#9733;</label>
+                  <label for="star3" title="3">&#9733 &#9733 &#9733;</label>
                   <br> 
                   <input type="radio" id="star2" name="rating" value="2">
-                  <label for="star2" title="2 stars">&#9733 &#9733;</label>
+                  <label for="star2" title="2">&#9733 &#9733;</label>
                   <br> 
                   <input type="radio" id="star1" name="rating" value="1">
-                  <label for="star1" title="1 star">&#9733;</label>
-                </div>
-              </p>
-              <p>
-                <label for="msg">Message:</label>
+                  <label for="star1" title="1">&#9733;</label>
+                 </div>
+              </p>-->
+
+              <p class="language">
+                <label for="msg" class="language">
+                  <span class="english"> Message:</span>
+                  <span class="french"> Message:</span>
+                </label>
                 <textarea
                   id="msg"
                   name="user_message"
@@ -186,20 +319,26 @@
               </p>
 
               <p>
-                <button type="submit" class="primary">Send your message</button>
+                <button type="submit" class="language, primary">
+                  <span class="english"> Send your message</span>
+                  <span class="french"> Envoyer votre message </span>
+                </button>
               </p>
             </form>
           </div>
         </div>
       </section>
       <p class="section3 contact3">
-        <a href="#top">Go To Top</a>
+        <a class="language" href="#top">
+          <span class="english"> Go To Top</span>
+          <span class="french"> Aller en haut</span>
+        </a>
       </p>
     </main>
     <footer>
       <p>&#169; 2024 Spoon&Fork. All rights reserved</p>
     </footer>
-     <!-- Link to javascript -->
-    <script src="scripts.js"></script>
+    <!-- Link to javascript -->
+    <script src="scripts/scripts.js"></script>
   </body>
 </html>
