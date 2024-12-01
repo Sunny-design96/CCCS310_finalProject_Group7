@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // _utilities.scss
 // lines under titles
 .section-title {
@@ -16,5 +17,26 @@
         width: 100%;
         height: 2px;
         background-color: $primary-color;
+=======
+//_utilities.scss
+
+// underline of title
+.section-title {
+    color: $primary-color; // Set the text color to the primary color
+    font-size: 2.25rem; // Set the font size
+    margin-bottom: 3rem; // Add space below the section title
+    font-family: $font-family; // Set the font family
+    position: relative; // Set position to relative for the pseudo-element
+    padding-bottom: 0.5rem; // Add padding at the bottom
+
+    &::after {
+        content: ''; // Create a pseudo-element with no content
+        position: absolute; // Position the pseudo-element absolutely
+        left: 0; // Align the pseudo-element to the left
+        bottom: 0; // Align the pseudo-element to the bottom
+        width: 100%; // Set the width to 100% of the parent element
+        height: 2px; // Set the height of the pseudo-element
+        background-color: $primary-color; // Set the background color to the primary color
+>>>>>>> Stashed changes
     }
 }

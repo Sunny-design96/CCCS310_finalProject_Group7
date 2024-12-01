@@ -1,5 +1,6 @@
 // _categories.scss
 
+<<<<<<< Updated upstream
 .section {
     padding: 3rem 1.5rem;
   
@@ -72,3 +73,89 @@
       }
     }
   }
+=======
+// Styling for the section
+.section {
+  padding: 3rem 1.5rem;
+
+  // Styling for the title with centered text
+  .title.has-text-centered {
+    @extend .has-text-weight-bold !optional; // Extending a class for bold text
+    color: $primary-color; // Setting the text color to primary color
+    font-size: 2rem; // Setting the font size
+    margin-bottom: 2.5rem; // Adding bottom margin
+    font-family: $font-family; // Setting the font family
+  }
+
+  // Styling for the card
+  .card {
+    @extend .has-shadow !optional; // Extending a class for shadow
+    @extend .is-clickable !optional; // Extending a class to make it clickable
+    height: 100%; // Setting the height to 100%
+    border-radius: $border-radius; // Setting the border radius
+    transition: transform 0.3s ease; // Adding a transition effect
+    overflow: hidden; // Hiding overflow content
+
+    // Hover effect for the card
+    &:hover {
+      transform: translateY(-5px); // Moving the card up on hover
+      @extend .has-shadow-medium !optional; // Extending a class for medium shadow
+    }
+
+    // Styling for the card image
+    .card-image {
+      padding: 1rem; // Adding padding
+
+      // Styling for the image with a specific aspect ratio
+      .image.is-4by3 {
+        width: 159px; // Setting the width
+        height: 159px; // Setting the height
+        margin: 0 auto; // Centering the image
+
+        // Styling for the image inside the container
+        img {
+          border-radius: 50%; // Making the image circular
+          width: 100%; // Setting the width to 100%
+          height: 100%; // Setting the height to 100%
+          object-fit: cover; // Ensuring the image covers the container
+        }
+      }
+    }
+
+    // Styling for the card content
+    .card-content {
+      padding: 1rem; // Adding padding
+      text-align: left; // Aligning text to the left
+
+      // Styling for the title inside the card content
+      .title.is-5 {
+        @extend .has-text-left !optional; // Extending a class for left-aligned text
+        color: $text-color; // Setting the text color
+        font-family: $font-family; // Setting the font family
+        font-size: 1rem; // Setting the font size
+        margin-bottom: 0; // Removing bottom margin
+        font-weight: 500; // Setting the font weight
+      }
+    }
+  }
+
+  // Styling for the columns
+  .columns {
+    @extend .is-multiline !optional; // Extending a class for multiline columns
+    margin: -0.75rem; // Adding negative margin
+
+    // Styling for the individual column
+    .column {
+      padding: 0.75rem; // Adding padding
+    }
+  }
+
+  // Media query for screens with a max width of 768px
+  @media screen and (max-width: 768px) {
+    // Styling for the column with a specific class
+    .column.is-one-quarter {
+      width: 50%; // Setting the width to 50%
+    }
+  }
+}
+>>>>>>> Stashed changes

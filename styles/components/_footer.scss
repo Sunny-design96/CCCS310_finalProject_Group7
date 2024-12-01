@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .main-footer {
     background-color: $primary-color;
     color: white;
@@ -23,6 +24,37 @@
                         color: white;
                         &:hover {
                             text-decoration: underline;
+=======
+//_footer.scss
+
+// Footer section at the bottom of the page
+.main-footer {
+    background-color: $primary-color; // Set background color to primary color
+    color: white; // Set text color to white
+    padding: 3rem 1.5rem; // Add padding to the footer
+
+    // Columns inside the footer
+    .columns {
+        .column.footer-column {
+            h3 {
+                font-size: 1.5rem; // Set font size for the heading
+                font-weight: bold; // Make the heading bold
+                margin-bottom: 1rem; // Add margin below the heading
+            }
+
+            ul {
+                list-style: none; // Remove default list styling
+                margin: 0; // Remove default margin
+                padding: 0; // Remove default padding
+
+                li {
+                    margin-bottom: 0.5rem; // Add margin below each list item
+
+                    a {
+                        color: white; // Set link color to white
+                        &:hover { // Hover state for the link
+                            text-decoration: underline; // Underline the link on hover
+>>>>>>> Stashed changes
                         }
                     }
                 }
@@ -31,10 +63,20 @@
     }
 }
 
+<<<<<<< Updated upstream
 .copyright {
     background-color: darken($primary-color, 5%);
     color: white;
     text-align: center;
     padding: 1rem;
     font-size: 0.875rem;
+=======
+// Copyright section at the bottom of the footer
+.copyright {
+    background-color: darken($primary-color, 5%); // Darken the primary color by 5% for the background
+    color: white; // Set text color to white
+    text-align: center; // Center align the text
+    padding: 1rem; // Add padding to the copyright section
+    font-size: 0.875rem; // Set font size for the text
+>>>>>>> Stashed changes
 }
