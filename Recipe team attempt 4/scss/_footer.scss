@@ -1,0 +1,31 @@
+@import 'variables';
+@import 'mixins';
+
+footer {
+    position: relative;
+    clear: both;  // Ensure the footer stays at the bottom
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-top: 20px;  // Add space between content and footer
+}
+
+/* Full Jump Button */
+.full-jump {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;  /* Initially hidden */
+    transition: background-color 0.3s;
+}
+
+.full-jump:hover {
+    background-color: #0056b3;
+}

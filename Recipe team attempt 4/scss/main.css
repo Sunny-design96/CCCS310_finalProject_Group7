@@ -1,0 +1,564 @@
+.navbar {
+  background-color: #f4f4f4;
+  padding: 0.5rem 1rem; /* Slender padding */
+  display: flex; /* This ensures the children align horizontally by default */
+  align-items: center; /* Vertically align all items */
+  justify-content: space-between; /* Spread items horizontally */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* 80% of the available width */
+  margin: 0 auto; /* Center the navbar horizontally */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adjust spacing between icons and text */
+}
+
+h1 {
+  font-size: 1.5rem; /* Adjust the font size of the title */
+  margin: 0; /* Remove default margin from h1 */
+}
+
+.navbar-links {
+  display: flex; /* Align links horizontally */
+  gap: 1rem; /* Space between links */
+  justify-content: center;
+  flex-grow: 1;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: black; /* Default color for links */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  font-weight: 400; /* Normal weight */
+}
+.navbar-links a:hover {
+  color: #549a7f; /* Change hover color */
+}
+
+.navbar-search {
+  margin-left: auto; /* Push the search bar to the far right */
+  display: flex;
+  align-items: center; /* Vertically align input and button */
+  gap: 0.5rem; /* Space between input and button */
+}
+.navbar-search form {
+  display: flex; /* Use flexbox for form elements */
+  align-items: center; /* Ensure input and button are vertically centered */
+  gap: 0.5rem; /* Optional: space between input and button */
+}
+.navbar-search input {
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #f4f4f4;
+  width: 200px; /* Adjust this width to suit your design */
+}
+.navbar-search button {
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+  background-color: #549a7f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.navbar-search button:hover {
+  background-color: #427964;
+}
+
+/* .navbar-item class (styling for links) */
+.navbar-item {
+  text-decoration: none;
+  color: black; /* Default color for links */
+  font-size: 1rem; /* Adjust font size */
+  font-weight: 400; /* Normal weight for links */
+}
+.navbar-item:hover {
+  color: #549a7f; /* Change color on hover */
+}
+
+.navbar .icon i {
+  font-size: 1.5em; /* Makes the icon 30% bigger */
+  color: #632d23;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+  }
+  .navbar-brand {
+    margin-bottom: 1rem;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .navbar-search {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .navbar-search input {
+    width: 80%;
+  }
+  .navbar-search button {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    width: 100%;
+  }
+  .navbar-links {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .navbar-search {
+    margin-left: auto;
+    width: auto;
+  }
+  .navbar-search input {
+    width: 180px;
+  }
+  .navbar-search button {
+    width: auto;
+  }
+  .navbar-brand {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .navbar-links {
+    gap: 2rem;
+  }
+  .navbar-search {
+    margin-left: auto;
+    width: auto;
+  }
+  .navbar-search input {
+    width: 220px;
+  }
+  .navbar-search button {
+    width: auto;
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(240, 239, 213);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  gap: 2rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.text-content {
+  flex: 1;
+  text-align: center;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-content img {
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.recipe-columns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.recipe-columns .column {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.recipe-columns .column h3 {
+  color: #bae978;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.recipe-columns .column ul, .recipe-columns .column ol {
+  padding-left: 1.5rem;
+}
+.recipe-columns .column-1, .recipe-columns .column-3 {
+  flex: 1;
+  background: #f4f4f4;
+}
+.recipe-columns .column-2 {
+  flex: 2;
+}
+.recipe-columns .column-1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+  max-height: 300px;
+}
+.recipe-columns .procedure-box, .recipe-columns .ingredients-box {
+  background-color: rgb(240, 227, 213);
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 90%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.ingredients-box {
+  background-color: rgb(240, 239, 213);
+}
+
+#toggle-List {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#toggle-List:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+#toggle-List:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(72, 163, 72, 0.6);
+}
+
+@media (max-width: 480px) {
+  .section {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .text-content {
+    text-align: left;
+    padding: 0 1rem;
+  }
+  .image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .recipe-columns {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .column {
+    min-width: 100%;
+    padding: 1rem;
+  }
+  .column-1 img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+  .procedure-box, .ingredients-box {
+    padding: 10px;
+    width: 100%;
+  }
+  #toggle-List {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .text-content {
+    text-align: left;
+  }
+  .image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .recipe-columns {
+    width: 90%;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+  .column {
+    min-width: 100%;
+  }
+  .column-1 img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+  .procedure-box, .ingredients-box {
+    padding: 12px;
+    width: 100%;
+  }
+  #toggle-List {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .section {
+    padding: 3rem;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .text-content {
+    text-align: center;
+  }
+  .image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .recipe-columns {
+    width: 80%;
+    gap: 2rem;
+  }
+  .column-1 img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+  .procedure-box, .ingredients-box {
+    padding: 15px;
+    width: 100%;
+    max-width: 90%;
+    background-color: rgb(240, 227, 213);
+  }
+  #toggle-List {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  background-color: #000;
+  border-radius: 8px;
+  margin: 1rem auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+#volume-slider {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Makes iframe fill the container */
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+.dismiss-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.banner-box {
+  position: relative; /* Ensure the banner-box can position elements relative to it */
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
+  background-color: #f4f4f4;
+  border: 2px dashed #ccc;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.close-button {
+  position: absolute; /* Absolute positioning inside the banner-box */
+  top: 5px;
+  right: 5px;
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #ff1a1a;
+}
+
+.countdown {
+  position: absolute; /* Position it over the X button */
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 0, 0, 0.6); /* Semi-transparent red background */
+  color: white;
+  font-size: 14px; /* Adjust font size */
+  font-weight: bold;
+  padding: 2px 5px; /* Add padding to the number */
+  border-radius: 50%;
+  display: none; /* Initially hidden */
+  z-index: 2; /* Make sure the countdown appears over the button */
+}
+
+.countdown.visible {
+  display: block; /* Show the countdown when it is made visible */
+}
+
+@media (max-width: 480px) {
+  .banner-box {
+    height: 80px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .close-button {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+  }
+  .countdown {
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+}
+@media (max-width: 768px) {
+  .banner-box {
+    height: 90px;
+    font-size: 1.1rem;
+  }
+  .close-button {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+  .countdown {
+    font-size: 13px;
+    padding: 3px 5px;
+  }
+}
+@media (min-width: 1024px) {
+  .banner-box {
+    height: 100px;
+    font-size: 1.2rem;
+  }
+  .close-button {
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+  }
+  .countdown {
+    font-size: 14px;
+    padding: 4px 6px;
+  }
+}
+body {
+  font-family: Arial, sans-serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+main {
+  flex-grow: 1;
+  padding-bottom: 20px;
+}
+
+.column-3 {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'navbarStan';
+@import 'sections';
+@import 'video';
+@import 'adbox';
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color; // Use the variable
+}
+
+main {
+    flex-grow: 1;  // Allow the main content to take up the remaining space
+    padding-bottom: 20px;  // Add padding to ensure footer doesn't stick to content
+}
+
+.column-3 {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
