@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Contact</title>
+    <!-- Meta tags for search engine optimization -->
     <meta
       name="description"
       content="Web page providing a method of contacting the creator of the website."
@@ -18,7 +19,7 @@
     <link
       rel="icon"
       type="image/png"
-      href="pictures/favicon.png"
+      href="Lavanna_Pictures/favicon.png"
       sizes="196x196"
     />
 
@@ -185,7 +186,7 @@
             src="Lavanna_Pictures/travelAd.jpg"
             alt="Advertisement for food delivery"
             title="Advertisement"
-            class="image"
+            class="image ads"
           />
         </div>
       </section>
@@ -203,18 +204,20 @@
         <div>
           <div>
             <form
+              name="contactForm"
               action="mailto:lavanna4278@gmail.com"
               method="post"
               enctype="text/plain"
+              id="myForm"
             >
               <p>
-                <label for="name" class="language">
+                <label for="user_name" class="language">
                   <span class="english">Name:</span>
                   <span class="french">Nom:</span>
                 </label>
                 <input
                   type="text"
-                  id="name"
+                  id="user_name"
                   name="user_name"
                   maxlength="40"
                   placeholder="Name/Nom"
@@ -226,14 +229,10 @@
                   <span class="french"> Courriel:</span>
                 </label>
                 <input
-                  type="email"
                   id="mail"
                   name="user_email"
                   maxlength="30"
-                  placeholder="Email/ Courriel"
-                  required="required"
-                  oninvalid="this.setCustomValidity('required/requis')"
-                  oninput="this.setCustomValidity()"
+                  placeholder="Email/Courriel"
                 />
               </p>
               <p>
@@ -281,30 +280,6 @@
                 </select>
               </p>
 
-              <!-- need to debug language will not change           <p>
-                <label for="ratings" class="language">
-                  <span class="english">How did you find our website?</span>
-                  <span class="french">Comment avez-vous trouvé notre site Web?</span>
-                </label>
-
-                <div id=ratings class="star-rating">
-                  <input type="radio" id="star5" name="rating" value="5">
-                  <label for="star5" title="5">&#9733 &#9733 &#9733 &#9733 &#9733;</label>
-                  <br> 
-                  <input type="radio" id="star4" name="rating" value="4">
-                  <label for="star4" title="4">&#9733 &#9733 &#9733 &#9733;</label>
-                  <br> 
-                  <input type="radio" id="star3" name="rating" value="3">
-                  <label for="star3" title="3">&#9733 &#9733 &#9733;</label>
-                  <br> 
-                  <input type="radio" id="star2" name="rating" value="2">
-                  <label for="star2" title="2">&#9733 &#9733;</label>
-                  <br> 
-                  <input type="radio" id="star1" name="rating" value="1">
-                  <label for="star1" title="1">&#9733;</label>
-                 </div>
-              </p>-->
-
               <p class="language">
                 <label for="msg" class="language">
                   <span class="english"> Message:</span>
@@ -317,9 +292,12 @@
                   placeholder="Message"
                 ></textarea>
               </p>
-
               <p>
-                <button type="submit" class="language, primary">
+                <button
+                  type="submit"
+                  class="primary language"
+                  onclick="validateForm()"
+                >
                   <span class="english"> Send your message</span>
                   <span class="french"> Envoyer votre message </span>
                 </button>
@@ -327,6 +305,7 @@
             </form>
           </div>
         </div>
+        <!-- Shortcut to top -->
       </section>
       <p class="section3 contact3">
         <a class="language" href="#top">
@@ -334,11 +313,20 @@
           <span class="french"> Aller en haut</span>
         </a>
       </p>
+      <!-- Option to close all ads on the webpage -->
+      <p>
+        <button type="submit" class="primary language" id="closeAds">
+          <span class="english"> Close Ads </span>
+          <span class="french"> Fermez Advertisements </span>
+        </button>
+      </p>
     </main>
     <footer>
       <p>&#169; 2024 Spoon&Fork. All rights reserved</p>
     </footer>
     <!-- Link to javascript -->
-    <script src="Lavanna_Scripts/scripts.js"></script>
+    <script src="Lavanna_Scripts/closeAds.js"></script>
+    <script src="Lavanna_Scripts/formValidation.js"></script>
+    <script src="Lavanna_Scripts/languageChange.js"></script>
   </body>
 </html>

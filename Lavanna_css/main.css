@@ -1,6 +1,6 @@
 body {
   font-size: 18px;
-  color: #632d23;
+  color: #000000;
   text-align: left;
 }
 
@@ -35,7 +35,7 @@ nav a {
 
 body {
   font-size: 18px;
-  color: #632d23;
+  color: #000000;
   text-align: left;
 }
 
@@ -122,7 +122,7 @@ nav a {
  */
 body {
   font-size: 18px;
-  color: #632d23;
+  color: #000000;
   text-align: left;
 }
 
@@ -247,7 +247,7 @@ h1 {
  */
 body {
   font-size: 18px;
-  color: #632d23;
+  color: #000000;
   text-align: left;
 }
 
@@ -334,7 +334,7 @@ nav a {
  */
 body {
   font-size: 18px;
-  color: #632d23;
+  color: #000000;
   text-align: left;
 }
 
@@ -372,7 +372,7 @@ nav a {
  * Sets the font style for the HTML document.
  */
 html {
-  font-style: "Times New Roman", Times, serif;
+  font-style: "Times New Roman";
 }
 
 /**
@@ -737,7 +737,7 @@ h1 {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 
@@ -835,4 +835,4 @@ ul li {
 
 .french {
   display: none;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
