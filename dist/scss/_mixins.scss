@@ -1,0 +1,15 @@
+// _buttons.scss
+
+// Mixin for button styles
+@mixin button-style($bg-color) {
+    background-color: $bg-color; // Setting the background color
+    border-color: $bg-color; // Setting the border color
+    color: $button-color; // Setting the text color
+    border-radius: 30px; // Setting the border radius
+    transition: background-color 0.3s; // Adding a transition effect for background color
+
+    // Hover effect for the button
+    &:hover {
+        background-color: darken($bg-color, 10%); // Darkening the background color on hover
+    }
+}

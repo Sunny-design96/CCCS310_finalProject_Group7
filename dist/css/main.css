@@ -1,0 +1,429 @@
+.section-title {
+  color: #A7727D;
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+  font-family: "Lato", sans-serif;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #A7727D;
+}
+
+.like-button {
+  margin-top: 0.5rem;
+}
+.like-button .icon {
+  margin-right: 0.25rem;
+}
+.like-button.is-liked {
+  background-color: #A7727D;
+  color: white;
+  border-color: #A7727D;
+}
+
+.has-text-footer-title {
+  color: #ffffff !important;
+  font-family: "Pacifico", cursive;
+}
+
+/*
+// Import Bulma
+@import 'bulma/sass/utilities/initial-variables';
+@import 'bulma/sass/base';
+@import 'bulma/sass/elements';
+@import 'bulma/sass/form';
+@import 'bulma/sass/components';
+@import 'bulma/sass/grid';
+@import 'bulma/sass/helpers';
+@import 'bulma/sass/layout';
+@import 'bulma/sass/components/pagination';
+@import 'bulma/bulma'; // Import all of Bulma at once, including the above.
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #FAF9F6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.navbar {
+  background-color: #FAF9F6;
+  box-shadow: 0 2px 3px rgba(167, 114, 125, 0.1);
+}
+.navbar .navbar-brand .navbar-item {
+  /*
+  .navbar-burger {
+      color: palevioletred; // Use Bulma variable for default color
+      &:hover {
+          color: darken(palevioletred, 10%); //Darken color on hover 
+      }
+      &.is-active {
+          color: lighten(palevioletred, 20%); //Lighten color when active 
+      }
+  }
+  */
+}
+.navbar .navbar-brand .navbar-item:hover {
+  background-color: #f5edf0;
+  color: #A7727D;
+}
+.navbar .navbar-brand .navbar-item .icon-text .icon {
+  color: #A7727D;
+}
+.navbar .navbar-brand .navbar-item .icon-text .has-text-weight-bold, .navbar .navbar-brand .navbar-item .icon-text .advertisement-section .title, .advertisement-section .navbar .navbar-brand .navbar-item .icon-text .title, .navbar .navbar-brand .navbar-item .icon-text .column.latest-recipes .title.section-title, .column.latest-recipes .navbar .navbar-brand .navbar-item .icon-text .title.section-title, .navbar .navbar-brand .navbar-item .icon-text .section .title.has-text-centered, .section .navbar .navbar-brand .navbar-item .icon-text .title.has-text-centered {
+  font-size: 37px;
+  color: #A7727D;
+  font-family: "Lato", sans-serif;
+}
+.navbar .navbar-menu .navbar-start .navbar-item {
+  font-family: "Lato", sans-serif;
+  color: #A7727D;
+}
+.navbar .navbar-menu .navbar-start .navbar-item:hover {
+  background-color: transparent;
+  color: lightpink;
+}
+.navbar .navbar-menu .navbar-start a.navbar-item {
+  font-family: "Lato", sans-serif;
+  color: #A7727D;
+}
+.navbar .navbar-menu .navbar-start a.navbar-item:hover {
+  background-color: transparent;
+  color: lightpink;
+}
+.navbar .navbar-menu .navbar-end .navbar-item .buttons .button.is-light:hover {
+  background-color: #A7727D;
+  color: white;
+}
+
+.hero.is-light {
+  background-color: #f5edf0;
+}
+.hero.is-light .hero-body {
+  padding: 5rem 1.5rem;
+}
+.hero.is-light .hero-body .title {
+  font-size: 3.5rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 2s ease-in-out;
+}
+.hero.is-light .hero-body .subtitle {
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 2rem;
+  animation: typing 2s steps(80, end);
+}
+.hero.is-light .hero-body .button {
+  background-color: #A7727D;
+  border-color: #A7727D;
+  color: white;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+  padding: 1.5rem 3rem;
+  font-size: 1.25rem;
+}
+.hero.is-light .hero-body .button:hover {
+  background-color: #8e5863;
+}
+.hero.is-light .hero-body .hero-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.hero.is-light .hero-body .hero-images .image, .hero.is-light .hero-body .hero-images .advertisement-section .advertisement-card .card-image figure, .advertisement-section .advertisement-card .card-image .hero.is-light .hero-body .hero-images figure {
+  width: 230px;
+  height: 230px;
+}
+.hero.is-light .hero-body .hero-images .image img, .hero.is-light .hero-body .hero-images .advertisement-section .advertisement-card .card-image figure img, .advertisement-section .advertisement-card .card-image .hero.is-light .hero-body .hero-images figure img {
+  border-radius: 300px;
+  transform: rotate(-23.45deg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.search-bar .field.has-addons {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+.search-bar .field.has-addons .control.is-expanded .input {
+  border-radius: 30px 0 0 30px;
+  border-color: #A7727D;
+}
+.search-bar .field.has-addons .control .button {
+  background-color: #A7727D;
+  border-color: #A7727D;
+  color: white;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+  border-radius: 0 30px 30px 0;
+}
+.search-bar .field.has-addons .control .button:hover {
+  background-color: #8e5863;
+}
+
+.section {
+  padding: 3rem 1.5rem;
+}
+.section .title.has-text-centered {
+  color: #A7727D;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  font-family: "Lato", sans-serif;
+}
+.section .card, .section .advertisement-section .advertisement-card, .advertisement-section .section .advertisement-card {
+  height: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  background-color: rgba(167, 114, 125, 0.2);
+}
+.section .card:hover, .section .advertisement-section .advertisement-card:hover, .advertisement-section .section .advertisement-card:hover {
+  transform: translateY(-5px);
+}
+.section .card .card-image, .section .advertisement-section .advertisement-card .card-image, .advertisement-section .section .advertisement-card .card-image {
+  padding: 1rem;
+}
+.section .card .card-image .image.is-4by3, .advertisement-section .advertisement-card .section .card .card-image figure, .section .advertisement-section .advertisement-card .card-image .image.is-4by3, .section .advertisement-section .advertisement-card .card-image figure, .advertisement-section .section .advertisement-card .card-image .image.is-4by3, .advertisement-section .section .advertisement-card .card-image figure {
+  width: 159px;
+  height: 159px;
+  margin: 0 auto;
+}
+.section .card .card-image .image.is-4by3 img, .advertisement-section .advertisement-card .section .card .card-image figure img, .section .advertisement-section .advertisement-card .card-image .image.is-4by3 img, .section .advertisement-section .advertisement-card .card-image figure img, .advertisement-section .section .advertisement-card .card-image .image.is-4by3 img, .advertisement-section .section .advertisement-card .card-image figure img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section .card .card-content, .section .advertisement-section .advertisement-card .card-content, .advertisement-section .section .advertisement-card .card-content {
+  padding: 1rem;
+  text-align: left;
+}
+.section .card .card-content .title.is-5, .section .advertisement-section .advertisement-card .card-content .title.is-5, .advertisement-section .section .advertisement-card .card-content .title.is-5 {
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.section .columns {
+  margin: -0.75rem;
+  background-color: rgba(245, 237, 240, 0.35);
+}
+.section .columns .column {
+  padding: 0.75rem;
+}
+@media screen and (max-width: 768px) {
+  .section .column.is-one-quarter {
+    width: 50%;
+  }
+}
+
+.column.latest-recipes {
+  padding: 3rem 1.5rem;
+}
+.column.latest-recipes .title.section-title {
+  color: #A7727D;
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+  font-family: "Lato", sans-serif;
+}
+.column.latest-recipes .recipe-cards {
+  margin-bottom: 3rem;
+}
+.column.latest-recipes .recipe-cards .card, .column.latest-recipes .recipe-cards .advertisement-section .advertisement-card, .advertisement-section .column.latest-recipes .recipe-cards .advertisement-card {
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.column.latest-recipes .recipe-cards .card:hover, .column.latest-recipes .recipe-cards .advertisement-section .advertisement-card:hover, .advertisement-section .column.latest-recipes .recipe-cards .advertisement-card:hover {
+  transform: translateY(-5px);
+}
+.column.latest-recipes .recipe-cards .card .card-image, .column.latest-recipes .recipe-cards .advertisement-section .advertisement-card .card-image, .advertisement-section .column.latest-recipes .recipe-cards .advertisement-card .card-image {
+  padding: 1rem;
+}
+.column.latest-recipes .recipe-cards .card .card-image figure, .column.latest-recipes .recipe-cards .advertisement-section .advertisement-card .card-image figure, .advertisement-section .column.latest-recipes .recipe-cards .advertisement-card .card-image figure {
+  border-radius: 0;
+  overflow: hidden;
+  margin: 0;
+  height: auto;
+}
+.column.latest-recipes .recipe-cards .card .card-image figure img, .column.latest-recipes .recipe-cards .advertisement-section .advertisement-card .card-image figure img, .advertisement-section .column.latest-recipes .recipe-cards .advertisement-card .card-image figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.column.latest-recipes .recipe-cards .card .card-image figure img:hover, .column.latest-recipes .recipe-cards .advertisement-section .advertisement-card .card-image figure img:hover, .advertisement-section .column.latest-recipes .recipe-cards .advertisement-card .card-image figure img:hover {
+  transform: scale(1.05);
+}
+.column.latest-recipes .recipe-cards .card .card-content, .column.latest-recipes .recipe-cards .advertisement-section .advertisement-card .card-content, .advertisement-section .column.latest-recipes .recipe-cards .advertisement-card .card-content {
+  padding: 1rem;
+}
+.column.latest-recipes .recipe-cards .card .card-content .title, .column.latest-recipes .recipe-cards .advertisement-section .advertisement-card .card-content .title, .advertisement-section .column.latest-recipes .recipe-cards .advertisement-card .card-content .title {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #333;
+  text-align: left;
+}
+.column.latest-recipes .pagination {
+  margin-top: 2rem;
+}
+.column.latest-recipes .pagination .pagination-list {
+  display: flex;
+  align-items: center;
+}
+.column.latest-recipes .pagination .pagination-list li {
+  margin: 0 0.25rem;
+}
+.column.latest-recipes .pagination .pagination-list li .pagination-link,
+.column.latest-recipes .pagination .pagination-list li .pagination-previous,
+.column.latest-recipes .pagination .pagination-list li .pagination-next {
+  border-color: #A7727D;
+  color: #A7727D;
+}
+.column.latest-recipes .pagination .pagination-list li .pagination-link.is-current,
+.column.latest-recipes .pagination .pagination-list li .pagination-previous.is-current,
+.column.latest-recipes .pagination .pagination-list li .pagination-next.is-current {
+  background-color: #A7727D;
+  border-color: #A7727D;
+  color: white;
+}
+.column.latest-recipes .pagination .pagination-list li .pagination-link:hover,
+.column.latest-recipes .pagination .pagination-list li .pagination-previous:hover,
+.column.latest-recipes .pagination .pagination-list li .pagination-next:hover {
+  background-color: white;
+}
+
+.advertisement-section {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.advertisement-section .title {
+  color: #A7727D;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.advertisement-section .advertisement-card {
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+.advertisement-section .advertisement-card:hover {
+  transform: translateY(-5px);
+}
+.advertisement-section .advertisement-card .card-image figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.advertisement-section .advertisement-card .card-content {
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+}
+.advertisement-section .advertisement-card .card-content .title {
+  color: #A7727D;
+  margin-bottom: 1rem;
+}
+.advertisement-section .advertisement-card .card-content p {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.advertisement-section .advertisement-card .card-content .button {
+  border-width: 2px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.advertisement-section .advertisement-card .card-content .button:hover {
+  background-color: #A7727D;
+  color: white;
+}
+
+.footer {
+  background-color: #A7727D;
+  color: white;
+  padding: 3rem 1.5rem;
+}
+.footer .columns .column h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.footer .columns .column ul {
+  margin: 0;
+  padding: 0;
+}
+.footer .columns .column ul li {
+  margin-bottom: 0.5rem;
+}
+.footer .columns .column ul li a {
+  color: white;
+}
+.footer .columns .column ul li a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  /*
+  background-color: $body-background-color; // Set background color to body background color
+  color: white; // Set text color to white
+  text-align: center; // Center align the text
+  padding: 1rem; // Add padding to the copyright section
+  font-size: 0.875rem; // Set font size for the text
+  */
+}
+.copyright.has-background-dark {
+  background-color: #FAF9F6 !important;
+}
+.copyright.has-text-white {
+  color: #333 !important;
+}
+.copyright.has-text-centered {
+  text-align: center !important;
+}
+.copyright.py-4 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}/*# sourceMappingURL=main.css.map */
