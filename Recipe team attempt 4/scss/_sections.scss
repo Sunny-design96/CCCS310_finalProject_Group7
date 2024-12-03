@@ -1,0 +1,293 @@
+@import 'variables';
+
+.section {
+    display: flex; // Use flexbox to center content
+    justify-content: center; // Center content horizontally
+    align-items: center; // Center content vertically
+    padding: 2rem; // Optional padding inside section
+    margin-top: 0; // Remove any margin at the top
+    margin-bottom: 0; // Remove any margin at the bottom
+    box-sizing: border-box; // Include padding in width/height
+}
+
+.container {
+    display: flex; // Apply flexbox layout to the container
+    justify-content: space-between; // Ensure space between text and image
+    align-items: center; // Vertically align items in the container
+    background-color: $background-color;
+    padding: 2rem; // Padding inside the container
+    border-radius: 10px; // Rounded corners
+    max-width: 800px; // Limit max width to 800px or another desired value
+    width: 100%; // Ensure it takes up 100% of available space, up to max-width
+    gap: 2rem; // Optional: Add space between text and image
+    box-sizing: border-box; // Ensure padding is included in the width
+    margin: 0 auto; // Center container horizontally
+}
+
+
+.text-content {
+    flex: 1; // Allow text content to take available space
+    text-align: center; // Center the text inside the text content div
+}
+
+.image-content {
+    flex: 1; // Allow image content to take available space
+    display: flex;
+    justify-content: center; // Center the image horizontally
+    align-items: center; // Center the image vertically
+
+    img {
+        width: 70%; // Set image width to 70% of the container's width
+        height: auto; // Maintain aspect ratio
+        border-radius: 15px; // Apply rounded corners
+    }
+}
+
+.recipe-columns {
+    display: flex;
+    justify-content: center; // Center all columns in the container
+    gap: 2rem; // Space between columns
+    width: 80%; // Set the container width to 80% of the screen width
+    margin: 0 auto; // Center the container horizontally
+
+    .column {
+        min-width: 200px; // Prevent columns from becoming too narrow
+        display: flex; // Enable flexbox in the columns
+        flex-direction: column; // Stack items vertically
+        align-items: center; // Center items horizontally within the column
+        justify-content: flex-start; // Align items at the start (top)
+
+        h3 {
+            color: black;
+            margin-bottom: 1rem;
+            text-align: center; // Center the title text
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+    }
+
+    .column-1, .column-3 {
+        flex: 1; // First and third columns take equal width
+        background: $background-color;
+    }
+    .column-2 {
+        flex: 2; // Second column takes twice the width of the others
+    }
+
+    .column-1 img {
+        max-width: 100%; // Ensure the image is responsive and doesn't exceed column width
+        height: auto; // Maintain aspect ratio
+        border-radius: 10px; // Optional: rounded corners for the image
+        margin-top: 1rem; // Add margin for spacing above the image
+        max-height: 300px; // Limit the height of the image to prevent it from getting too large
+    }
+
+    // Style for ingredients and procedure boxes
+    .procedure-box, .ingredients-box {
+        background-color: $Test-color;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 0;
+        width: 100%; // Make both boxes take up the full width of column-2
+        max-width: 90%; // Limit the maximum width (optional)
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden; // Ensures content doesn't overflow
+    }
+}
+
+.ingredients-box{
+    background-color: rgb(240, 239, 213);
+}
+
+.ingredients-box ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 20px; /* Adjust for visual alignment */
+}
+
+.ingredients-box ul li::before {
+    content: "—"; /* Insert dash */
+    color: inherit; /* Match text color */
+    margin-right: 10px; /* Space between dash and text */
+}
+
+.procedure-box ol {
+    list-style-type: decimal; /* Use default numbers */
+    padding-left: 20px; /* Align with ul */
+}
+#toggle-List {
+    // Base styles
+    background-color: #4CAF50; // Set a green background color for the button
+    color: white; // Use white text for high contrast against the green background
+    padding: 5px 10px; // Adjust padding to make the button smaller (30% reduction from original)
+    font-size: 9px; // font size button
+    font-weight: bold; // Keep the text bold for readability
+    border: none; // Remove the default border for a cleaner appearance
+    border-radius: 3px; // Round the corners 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+   
+
+    // Hover effect
+    &:hover {
+        background-color: #45a049; // Slightly darken the green when the button is hovered
+        transform: scale(1.05); // Enlarge the button slightly to give a hover feedback effect
+    }
+
+    // Focus effect
+    &:focus {
+        outline: none; // Remove the default focus outline to avoid clashing with the design
+        box-shadow: 0 0 10px rgba(72, 163, 72, 0.6); 
+        // Add a subtle glow effect when the button is focused for accessibility and aesthetics
+    }
+}
+
+
+// Mobile styles (max-width: 480px)
+@media (max-width: 480px) {
+    .section {
+        flex-direction: column; // Stack content vertically
+        padding: 1rem; // Adjust padding for smaller screens
+    }
+
+    .container {
+        flex-direction: column; // Stack text and image content vertically
+        padding: 1rem; // Adjust padding for smaller screens
+    }
+
+    .text-content {
+        text-align: left; // Align text to the left for readability on small screens
+        padding: 0 1rem; // Add some padding to text content
+    }
+
+    .image-content {
+        display: flex;
+        justify-content: center; // Keep the image centered
+        align-items: center;
+        margin-top: 1rem; // Add space between text and image
+    }
+
+    .recipe-columns {
+        flex-direction: column; // Stack the columns vertically
+        width: 100%; // Take up full width
+        gap: 1rem; // Reduce gap between columns
+    }
+
+    .column {
+        min-width: 100%; // Ensure columns take up full width
+        padding: 1rem; // Add padding to columns for spacing
+    }
+
+    .column-1 img {
+        max-width: 100%; // Ensure images are responsive
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .procedure-box, .ingredients-box {
+        padding: 10px;
+        width: 100%; // Ensure full width for the procedure and ingredients boxes
+    }
+
+    #toggle-List {
+        font-size: 14px; // Adjust font size for smaller screens
+        padding: 8px 16px; // Adjust button padding for smaller screens
+    }
+}
+
+// Tablet styles (max-width: 768px)
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column; // Stack content vertically
+        padding: 1.5rem; // Adjust padding for medium screens
+    }
+
+    .container {
+        flex-direction: column; // Stack text and image content vertically
+        padding: 1.5rem; // Add some space inside the container
+    }
+
+    .text-content {
+        text-align: left; // Align text to the left for readability
+    }
+
+    .image-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .recipe-columns {
+        width: 90%; // Reduce width to provide spacing on sides
+        gap: 1.5rem; // Increase gap between columns
+        flex-direction: column; // Stack columns vertically on smaller screens
+    }
+
+    .column {
+        min-width: 100%; // Ensure columns take up full width
+    }
+
+    .column-1 img {
+        max-width: 100%; // Make sure images are responsive
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .procedure-box, .ingredients-box {
+        padding: 12px;
+        width: 100%; // Ensure full width for procedure and ingredients boxes
+    }
+
+    #toggle-List {
+        font-size: 15px; // Slightly larger font size
+        padding: 10px 18px; // Adjust padding for tablet size
+    }
+}
+
+// Desktop styles (min-width: 1024px)
+@media (min-width: 1024px) {
+    .section {
+        padding: 3rem; // More padding for larger screens
+    }
+
+    .container {
+        flex-direction: row; // Keep text and image side by side
+        justify-content: space-between; // Ensure space between text and image
+    }
+
+    .text-content {
+        text-align: center; // Center the text content for better design
+    }
+
+    .image-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .recipe-columns {
+        width: 80%; // Give the recipe columns more width
+        gap: 2rem; // Maintain the gap between columns
+    }
+
+    .column-1 img {
+        max-width: 100%; // Ensure image is responsive
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .procedure-box, .ingredients-box {
+        padding: 15px;
+        width: 100%;
+        max-width: 90%; // Limit the max width of the boxes
+        background-color: $Test-color;
+    }
+
+    #toggle-List {
+        font-size: 18px; // Larger font size for desktop
+        padding: 12px 24px; // Larger padding for desktop buttons
+    }
+}

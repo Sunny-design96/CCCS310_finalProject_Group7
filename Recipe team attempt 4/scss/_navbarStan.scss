@@ -1,0 +1,188 @@
+@import 'variables';
+
+.navbar {
+    background-color: $background-color; 
+    padding: 0.5rem 1rem; /* Slender padding */
+    display: flex; /* This ensures the children align horizontally by default */
+    align-items: center; /* Vertically align all items */
+    justify-content: space-between; /* Spread items horizontally */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* 80% of the available width */
+    margin: 0 auto; /* Center the navbar horizontally */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Adjust spacing between icons and text */
+}
+
+h1 {
+    font-size: 1.5rem; /* Adjust the font size of the title */
+    margin: 0; /* Remove default margin from h1 */
+}
+
+.navbar-links {
+    display: flex; /* Align links horizontally */
+    gap: 1rem; /* Space between links */
+    justify-content: center;
+    flex-grow: 1;
+
+    a {
+        text-decoration: none;
+        color: black; /* Default color for links */
+        font-size: 0.9rem; /* Slightly smaller font size */
+        font-weight: 400; /* Normal weight */
+        
+        &:hover {
+            color: $primary-color; /* Change hover color */
+        }
+    }
+}
+
+.navbar-search {
+    margin-left: auto; /* Push the search bar to the far right */
+    display: flex;
+    align-items: center; /* Vertically align input and button */
+    gap: 0.5rem; /* Space between input and button */
+
+    form {
+        display: flex; /* Use flexbox for form elements */
+        align-items: center; /* Ensure input and button are vertically centered */
+        gap: 0.5rem; /* Optional: space between input and button */
+    }
+
+    input {
+        padding: 0.3rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        border: 1px solid $background-color;
+        width: 200px; /* Adjust this width to suit your design */
+    }
+
+    button {
+        padding: 0.3rem 0.7rem;
+        font-size: 1rem;
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+/* .navbar-item class (styling for links) */
+.navbar-item {
+    text-decoration: none;
+    color: black; /* Default color for links */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 400; /* Normal weight for links */
+    
+    &:hover {
+        color: $primary-color; /* Change color on hover */
+    }
+}
+
+.navbar .icon i {
+    font-size: 1.5em; /* Makes the icon 30% bigger */
+    color: #632d23;
+}
+
+// Mobile styles (max-width: 480px)
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; // Stack items vertically
+        padding: 1rem; // Reduce padding for smaller screens
+        width: 100%; // Ensure navbar takes full width
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem; // Space between brand and links on mobile
+    }
+
+    .navbar-links {
+        flex-direction: column; // Stack links vertically
+        gap: 1rem; // Space between links
+        align-items: center; // Center the links
+    }
+
+    .navbar-search {
+        margin-top: 1rem; // Space between search and navbar items
+        width: 100%; // Ensure the search bar takes full width
+        justify-content: center; // Center the search bar on small screens
+    }
+
+    .navbar-search input {
+        width: 80%; // Adjust input field to take up most of the width
+    }
+
+    .navbar-search button {
+        width: auto; // Let the button adjust to its content
+    }
+}
+// Tablet styles (max-width: 768px)
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem; // Adjust padding for tablet
+        width: 100%; // Ensure navbar takes full width
+    }
+
+    .navbar-links {
+        gap: 1.5rem; // Increase space between links
+        justify-content: center;
+    }
+
+    .navbar-search {
+        margin-left: auto; // Push search bar to the right
+        width: auto; // Allow search bar to take necessary width
+    }
+
+    .navbar-search input {
+        width: 180px; // Reduce input width for better fit
+    }
+
+    .navbar-search button {
+        width: auto; // Let the button size adjust to the content
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem; // Add space between brand and links
+    }
+}
+
+// Desktop styles (min-width: 1024px)
+@media (min-width: 1024px) {
+    .navbar {
+        padding: 1rem 2rem; // More padding for larger screens
+        justify-content: space-between; // Spread out items
+        width: 90%; // Use 90% width for better spacing
+    }
+
+    .navbar-links {
+        gap: 2rem; // Increase the gap between links
+    }
+
+    .navbar-search {
+        margin-left: auto; // Keep search bar to the right
+        width: auto; // Let search bar take necessary space
+    }
+
+    .navbar-search input {
+        width: 220px; // Adjust input field for larger screens
+    }
+
+    .navbar-search button {
+        width: auto; // Keep button size flexible
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem; // Space between brand icon and text
+    }
+}
+

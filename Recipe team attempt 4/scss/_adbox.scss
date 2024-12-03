@@ -1,0 +1,115 @@
+.banner-box {
+    position: relative; /* Ensure the banner-box can position elements relative to it */
+    width: 100%;
+    max-width: 800px;
+    height: 100px;
+    background-color: $background-color;
+    border: 2px dashed #ccc;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.close-button {
+    position: absolute; /* Absolute positioning inside the banner-box */
+    top: 5px;
+    right: 5px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #ff1a1a;
+}
+
+.countdown {
+    position: absolute; /* Position it over the X button */
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 0, 0, 0.6); /* Semi-transparent red background */
+    color: white;
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold;
+    padding: 2px 5px; /* Add padding to the number */
+    border-radius: 50%;
+    display: none; /* Initially hidden */
+    z-index: 2; /* Make sure the countdown appears over the button */
+}
+
+.countdown.visible {
+    display: block; /* Show the countdown when it is made visible */
+}
+// Mobile styles (max-width: 480px)
+@media (max-width: 480px) {
+    .banner-box {
+        height: 80px;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .close-button {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+    }
+
+    .countdown {
+        font-size: 12px;
+        padding: 2px 4px;
+    }
+}
+
+// Tablet styles (max-width: 768px)
+@media (max-width: 768px) {
+    .banner-box {
+        height: 90px;
+        font-size: 1.1rem;
+    }
+
+    .close-button {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .countdown {
+        font-size: 13px;
+        padding: 3px 5px;
+    }
+}
+
+// Desktop styles (min-width: 1024px)
+@media (min-width: 1024px) {
+    .banner-box {
+        height: 100px;
+        font-size: 1.2rem;
+    }
+
+    .close-button {
+        width: 22px;
+        height: 22px;
+        font-size: 16px;
+    }
+
+    .countdown {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+}

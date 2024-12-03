@@ -1,0 +1,46 @@
+@mixin section1-style($last-color, $secondary-color) {
+    background-color: $last-color;
+    border-color: $secondary-color;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 20px;
+    padding: 30px;
+  }
+   
+  /**
+   * @mixin section2-style
+   * Applies styling for the about us and blog sections.
+   */
+  @mixin section2-style() {
+    background-color: rgb(240, 215, 213);
+    border-radius: 25px;
+    padding: 5px 10px 10px 10px;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 10px;
+  }
+   
+  /**
+   * @mixin section3-style
+   * Applies styling for the fun fact and form sections.
+   */
+  @mixin section3-style() {
+    background-color: rgb(240, 227, 213);
+    border-radius: 25px;
+    padding: 5px 10px 10px 10px;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 10px;
+  }
+   
+  @mixin section4-style() {
+    background-color: rgb(240, 239, 213);
+    border-radius: 25px;
+    padding: 5px 10px 10px 10px;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 10px;
+  }

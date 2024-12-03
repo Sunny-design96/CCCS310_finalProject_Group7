@@ -1,0 +1,21 @@
+// _variables.scss
+
+$primary-color: #549a7f;
+$secondary-color: #bae978;
+$background-color: #f4f4f4;
+$text-color: #53c1d9;
+$font-family: Arial, sans-serif;
+$button-color: white;
+
+$instruction-color: #e7d3a5;
+$Test-color: rgb(240, 227, 213); 
+$background-color2: rgb(240, 239, 213);
+ 
+$dark-gray: rgba(128, 128, 128, 1);
+
+// Add the $font-stack definition here
+$font-stack: $font-family, sans-serif;
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
