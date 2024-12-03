@@ -1,0 +1,64 @@
+//_footer.scss
+
+// Footer section at the bottom of the page
+.footer {
+    background-color: $primary-color; // Set background color to primary color
+    color: white; // Set text color to white
+    padding: 3rem 1.5rem; // Add padding to the footer
+
+    // Columns inside the footer
+    .columns {
+        .column {
+            h3 {
+                font-size: 1.5rem; // Set font size for the heading
+                font-weight: bold; // Make the heading bold
+                margin-bottom: 1rem; // Add margin below the heading
+            }
+
+            ul {
+                //list-style: none; // Remove default list styling
+                margin: 0; // Remove default margin
+                padding: 0; // Remove default padding
+
+                li {
+                    margin-bottom: 0.5rem; // Add margin below each list item
+
+                    a {
+                        color: white; // Set link color to white
+                        &:hover { // Hover state for the link
+                            text-decoration: underline; // Underline the link on hover
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Copyright section at the bottom of the footer
+.copyright {
+    /*
+    background-color: $body-background-color; // Set background color to body background color
+    color: white; // Set text color to white
+    text-align: center; // Center align the text
+    padding: 1rem; // Add padding to the copyright section
+    font-size: 0.875rem; // Set font size for the text
+    */
+    // Override Bulma classes
+    &.has-background-dark {
+        background-color: $body-background-color !important; // Override background color
+    }
+    
+    &.has-text-white {
+        color: $text-color !important; // Override text color
+    }
+    
+    &.has-text-centered {
+        text-align: center !important; // Ensure text is centered
+    }
+    
+    &.py-4 {
+        padding-top: 1rem !important; // Ensure padding is applied
+        padding-bottom: 1rem !important; // Ensure padding is applied
+    }
+}

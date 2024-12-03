@@ -1,0 +1,78 @@
+//_header.scss
+// Styles for the navigation bar
+.navbar{
+    @extend.is-spaced !optional; // Add spacing between navbar items
+    // Background color and shadow for the navbar
+    background-color: $white-bis;
+    box-shadow: 0 2px 3px rgba($primary, 0.1);
+
+    .navbar-brand {
+        .navbar-item {
+            &:hover {
+                background-color: $secondary-color;//transparent;
+                color: $primary; // Change color on hover
+            }
+            .icon-text {
+                .icon {
+                    // Color for the icon inside the navbar brand
+                    color: $primary;
+                }
+                .has-text-weight-bold {
+                    // Font size, color, and family for bold text inside the navbar brand
+                    font-size: 37px;
+                    color: $primary;
+                    font-family: $family-primary;
+                }
+            }
+            /*
+            .navbar-burger {
+                color: palevioletred; // Use Bulma variable for default color
+                &:hover {
+                    color: darken(palevioletred, 10%); //Darken color on hover 
+                }
+                &.is-active {
+                    color: lighten(palevioletred, 20%); //Lighten color when active 
+                }
+            }
+            */
+        }
+    }
+
+    .navbar-menu {
+        .navbar-start{
+            .navbar-item {
+                &:hover {
+                    background-color: transparent;
+                    color: lightpink; // Change color to light pink on hover
+                }
+                // Font family and color for navbar items
+                font-family: $family-primary;
+                color: $primary;
+            }
+
+            a.navbar-item{
+                &:hover {
+                    background-color: transparent;
+                    color: lightpink; // Change color to light pink on hover
+                }
+                // Font family and color for navbar items
+                font-family: $family-primary;
+                color: $primary;
+            }
+        }
+        .navbar-end {
+            .navbar-item{
+            .buttons {
+                .button.is-light {
+                        
+                    &:hover {
+                            // Hover state for light variant button
+                            background-color: $primary;
+                            color: $button-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

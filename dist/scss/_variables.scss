@@ -1,0 +1,25 @@
+//_variable.scss
+// Define color variables
+$primary-color: #A7727D; // Primary color for the theme
+$secondary-color: #f5edf0; // Secondary color for accents
+$background-color: #FAF9F6; // Background color for the page
+$text-color: #333; // Default text color
+$font-family: 'Lato', sans-serif; // Font family for the text
+$button-color: white; // Color for buttons
+$border-radius: 5px; // Border radius for rounded corners
+// Define new color variables for footer titles
+$footer-title-color: #ffffff;
+$font-footer-title: 'Pacifico', cursive;
+//$navbar-burger-color:$secondary-color;
+
+// Override Bulma variables
+$primary: $primary-color; // Set Bulma's primary color to the theme's primary color
+$family-primary: $font-family; // Set Bulma's primary font family to the theme's font family
+$body-background-color: $background-color; // Set Bulma's body background color to the theme's background color
+//Override BUlma's footer variables
+$footer-background-color: $primary-color; // Use primary color
+$footer-color: $text-color; // Set text color to text color
+$footer-padding: 3rem 1.5rem;
+//Override Bulma's navbar variables
+//$navbar-burger-color:$navbar-burger-color;
+$white-bis:$background-color;

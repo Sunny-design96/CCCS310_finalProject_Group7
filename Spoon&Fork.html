@@ -7,8 +7,13 @@
   <meta name="keywords" content="spoon and fork, recipe blog, cooking, breakfast, lunch, dinner, desserts, healthy recipes" />
   <meta name="author" content="Olivia" />
   <title>Spoon & Fork</title>
+  <!-- Bulma CSS -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css"
+  >
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="../dist/css/main.css">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -16,7 +21,7 @@
   <!-- Header -->
   <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="#">
+      <a class="navbar-item" href="Spoon&Fork.html">
         <span class="icon-text">
           <span class="icon has-text-primary">
             <i class="fa-solid fa-spoon" style="color: #632d23;"></i>
@@ -30,7 +35,8 @@
           <span class="has-text-weight-bold">Spoon&Fork</span>
         </span>
       </a>
-      <button class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu" onKeyDown="toggleMenu(event)">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -41,14 +47,14 @@
       <div class="navbar-start">
         <a class="navbar-item" href="Spoon&Fork.html">Home</a>
         <a class="navbar-item" href="#">Recipes</a>
-        <a class="navbar-item" href="about.html">About</a>
-        <a class="navbar-item" href="#">Blog</a>
+        <a class="navbar-item" href="About.html">About</a>
+        <a class="navbar-item" href="RecipeBlog.html">Blog</a>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
             <a class="button is-light">Sign in</a>
-            <a class="button is-primary">Sign up</a>
+            <a class="button is-light">Sign up</a>
           </div>
         </div>
       </div>
@@ -63,7 +69,7 @@
         <!-- Text Column -->
         <div class="column is-6">
           <h1 class="title is-1">
-            Delicious <span class="has-text-primary">Dishes</span> for Food Lovers
+            Delicious <span class="has-text-danger">Dishes</span> for Food Lovers
           </h1>
           <p class="subtitle is-4">
             A food blog with hundreds of quick and easy dinner recipes. Classics done right, incredible one-pot recipes, Asian takeout at home, and holiday feasting!
@@ -91,14 +97,22 @@
 </section>
 
 <!-- Search Bar -->
-<section class="section">
+<section class="section search-bar">
   <div class="container">
     <div class="field has-addons has-addons-centered">
       <div class="control is-expanded">
-        <input class="input" type="text" placeholder="Search for a recipe">
+        <input class="input is-rounded is-info search-input" type="text" placeholder="Search for a recipe" autocomplete="off">
+        <!-- Autocomplete Results -->
+        <div class="dropdown" id="search-dropdown">
+          <div class="dropdown-menu" id="search-menu" role="menu">
+            <div class="dropdown-content" id="search-results">
+              <!-- Search results will appear here -->
+            </div>
+          </div>
+        </div>
       </div>
       <div class="control">
-        <a class="button is-primary">
+        <a class="button is-danger">
           <span class="icon">
             <i class="fas fa-search"></i>
           </span>
@@ -111,7 +125,7 @@
   <!-- Categories Section -->
   <section class="section">
     <div class="container">
-      <h2 class="title has-text-centered">Categories</h2>
+      <h2 class="title section-title has-text-centered">Categories</h2>
       <div class="columns is-multiline">
         <div class="column is-one-quarter">
           <div class="card">
@@ -219,7 +233,7 @@
       <div class="columns">
         <!-- Latest Recipes Column -->
         <div class="column is-8 latest-recipes">
-          <h2 class="title section-title">Latest Recipes</h2>
+          <h2 class="title section-title">Popular Recipes</h2>
           <div class="recipe-cards">
             <!-- First Row -->
             <div class="columns is-multiline">
@@ -364,7 +378,7 @@
             <div class="card-content has-text-centered">
               <p class="title is-5">Special Offer!</p>
               <p>Get 20% off on kitchen essentials</p>
-              <a href="#" class="button is-primary is-outlined mt-4">Learn More</a>
+              <a href="#" class="button is-danger is-outlined mt-4">Learn More</a>
             </div>
           </div>
           <!-- Add more ad cards below -->
@@ -374,35 +388,43 @@
   </section>
 
   <!-- Footer -->
-  <footer class="main-footer">
-    <div class="columns">
-      <div class="column footer-column">
-        <h3>Contact Us</h3>
-        <ul>
-          <li>Email: info@example.com</li>
-          <li>Phone: +123456789</li>
-        </ul>
-      </div>
-      <div class="column footer-column">
-        <h3>Archives</h3>
-        <ul>
-          <li>January 2023</li>
-          <li>December 2022</li>
-          <li>November 2022</li>
-        </ul>
-      </div>
-      <div class="column footer-column">
-        <h3>Recipes</h3>
-        <ul>
-          <li><a href="dinner.html">Dinner</a></li>
-          <li><a href="breakfast.html">Breakfast</a></li>
-          <li><a href="desserts.html">Desserts</a></li>
-        </ul>
+  <footer class="footer">
+    <div class="content">
+      <div class="columns">
+        <div class="column">
+          <h3 class="title is-5 has-text-weight-bold has-text-footer-title">Contact Us</h3>
+          <ul class="ml-4">
+            <li>Email: info@example.com</li>
+            <li>Phone: +123456789</li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3 class="title is-5 has-text-weight-bold has-text-footer-title">Archives</h3>
+          <ul class="ml-4">
+            <li>January 2023</li>
+            <li>December 2022</li>
+            <li>November 2022</li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3 class="title is-5 has-text-weight-bold has-text-footer-title">Recipes</h3>
+          <ul class="ml-4">
+            <li><a href="dinner.html">Dinner</a></li>
+            <li><a href="breakfast.html">Breakfast</a></li>
+            <li><a href="desserts.html">Desserts</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <a href="#top"><h3 class="title is-5 has-text-weight-bold has-text-footer-title">Go to top</h3></a>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
-  <div class="copyright">
-    &copy; 2024 by <strong>Olivia</strong>. All Rights Reserved.
+
+  <div class="copyright has-background-dark has-text-white has-text-centered py-4">
+    &copy; 2024 by <strong>Olivia&Lavanna&Stanley</strong>. All Rights Reserved.
   </div>
+  <script src="js/olivia.js"></script>
 </body>
 </html>

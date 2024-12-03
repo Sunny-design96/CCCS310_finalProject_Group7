@@ -1,0 +1,22 @@
+//_base.scss
+
+// The html element is set to have smooth scrolling behavior.
+html {
+    scroll-behavior: smooth;
+}
+
+// The body element is styled with a custom font family, background color, and text color.
+// These values are defined by the variables $font-family, $background-color, and $text-color.
+body {
+    font-family: $family-primary;
+    background-color: $body-background-color;
+    color: $text-color;
+}
+
+// The container class is used to center content and set a maximum width.
+// It also adds horizontal padding to the content.
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
